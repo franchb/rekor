@@ -37,19 +37,19 @@ import (
 	_ "github.com/theupdateframework/go-tuf/pkg/deprecated/set_ecdsa"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/sigstore/rekor/pkg/log"
-	"github.com/sigstore/rekor/pkg/types"
-	"github.com/sigstore/rekor/pkg/types/tuf"
-	"github.com/sigstore/rekor/pkg/util"
+	"github.com/franchb/rekor/pkg/log"
+	"github.com/franchb/rekor/pkg/types"
+	"github.com/franchb/rekor/pkg/types/tuf"
+	"github.com/franchb/rekor/pkg/util"
 
 	"github.com/go-openapi/strfmt"
 
-	"github.com/sigstore/rekor/pkg/pki"
+	"github.com/franchb/rekor/pkg/pki"
 
-	ptuf "github.com/sigstore/rekor/pkg/pki/tuf"
+	ptuf "github.com/franchb/rekor/pkg/pki/tuf"
 
+	"github.com/franchb/rekor/pkg/generated/models"
 	"github.com/go-openapi/swag"
-	"github.com/sigstore/rekor/pkg/generated/models"
 )
 
 const (

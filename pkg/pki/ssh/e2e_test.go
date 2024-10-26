@@ -18,7 +18,7 @@
 package ssh
 
 import (
-	"github.com/sigstore/rekor/pkg/util"
+	"github.com/franchb/rekor/pkg/util"
 	"io/ioutil"
 	"path/filepath"
 	"strings"

@@ -26,9 +26,9 @@ import (
 	"reflect"
 	"testing"
 
+	"github.com/franchb/sigstore/pkg/cryptoutils"
 	"github.com/google/go-cmp/cmp"
 	minisign "github.com/jedisct1/go-minisign"
-	"github.com/sigstore/sigstore/pkg/cryptoutils"
 	"go.uber.org/goleak"
 )
 

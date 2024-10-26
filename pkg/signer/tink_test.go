@@ -20,9 +20,9 @@ import (
 	"strings"
 	"testing"
 
-	tinkUtils "github.com/sigstore/rekor/pkg/signer/tink"
-	"github.com/sigstore/sigstore/pkg/cryptoutils"
-	_ "github.com/sigstore/sigstore/pkg/signature/kms/fake"
+	tinkUtils "github.com/franchb/rekor/pkg/signer/tink"
+	"github.com/franchb/sigstore/pkg/cryptoutils"
+	_ "github.com/franchb/sigstore/pkg/signature/kms/fake"
 	"github.com/tink-crypto/tink-go/v2/aead"
 	"github.com/tink-crypto/tink-go/v2/keyset"
 	"github.com/tink-crypto/tink-go/v2/signature"

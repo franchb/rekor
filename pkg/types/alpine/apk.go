@@ -31,8 +31,8 @@ import (
 	"io"
 	"strings"
 
-	"github.com/sigstore/sigstore/pkg/signature"
-	"github.com/sigstore/sigstore/pkg/signature/options"
+	"github.com/franchb/sigstore/pkg/signature"
+	"github.com/franchb/sigstore/pkg/signature/options"
 	"github.com/spf13/viper"
 	"gopkg.in/ini.v1"
 )

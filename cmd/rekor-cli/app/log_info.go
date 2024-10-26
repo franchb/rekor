@@ -23,21 +23,21 @@ import (
 	"errors"
 	"fmt"
 
+	rclient "github.com/franchb/rekor/pkg/generated/client"
+	"github.com/franchb/rekor/pkg/generated/models"
 	"github.com/go-openapi/swag"
-	rclient "github.com/sigstore/rekor/pkg/generated/client"
-	"github.com/sigstore/rekor/pkg/generated/models"
 
-	"github.com/sigstore/rekor/pkg/verify"
+	"github.com/franchb/rekor/pkg/verify"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/sigstore/rekor/cmd/rekor-cli/app/format"
-	"github.com/sigstore/rekor/cmd/rekor-cli/app/state"
-	"github.com/sigstore/rekor/pkg/client"
-	"github.com/sigstore/rekor/pkg/generated/client/tlog"
-	"github.com/sigstore/rekor/pkg/log"
-	"github.com/sigstore/rekor/pkg/util"
-	"github.com/sigstore/sigstore/pkg/signature"
+	"github.com/franchb/rekor/cmd/rekor-cli/app/format"
+	"github.com/franchb/rekor/cmd/rekor-cli/app/state"
+	"github.com/franchb/rekor/pkg/client"
+	"github.com/franchb/rekor/pkg/generated/client/tlog"
+	"github.com/franchb/rekor/pkg/log"
+	"github.com/franchb/rekor/pkg/util"
+	"github.com/franchb/sigstore/pkg/signature"
 )
 
 type logInfoCmdOutput struct {

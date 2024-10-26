@@ -28,11 +28,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/sigstore/rekor/pkg/client"
-	"github.com/sigstore/rekor/pkg/generated/client/entries"
-	"github.com/sigstore/rekor/pkg/types"
-	"github.com/sigstore/sigstore/pkg/cryptoutils"
-	"github.com/sigstore/sigstore/pkg/signature"
+	"github.com/franchb/rekor/pkg/client"
+	"github.com/franchb/rekor/pkg/generated/client/entries"
+	"github.com/franchb/rekor/pkg/types"
+	"github.com/franchb/sigstore/pkg/cryptoutils"
+	"github.com/franchb/sigstore/pkg/signature"
 )
 
 func rekorServer() string {

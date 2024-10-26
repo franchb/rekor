@@ -20,7 +20,7 @@ import (
 	"crypto"
 	"fmt"
 
-	"github.com/sigstore/sigstore/pkg/signature"
+	"github.com/franchb/sigstore/pkg/signature"
 	"go.step.sm/crypto/pemutil"
 )
 

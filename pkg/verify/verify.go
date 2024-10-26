@@ -25,12 +25,12 @@ import (
 	"fmt"
 
 	"github.com/cyberphone/json-canonicalization/go/src/webpki.org/jsoncanonicalizer"
-	"github.com/sigstore/rekor/pkg/generated/client"
-	"github.com/sigstore/rekor/pkg/generated/client/tlog"
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/util"
-	"github.com/sigstore/sigstore/pkg/signature"
-	"github.com/sigstore/sigstore/pkg/signature/options"
+	"github.com/franchb/rekor/pkg/generated/client"
+	"github.com/franchb/rekor/pkg/generated/client/tlog"
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/util"
+	"github.com/franchb/sigstore/pkg/signature"
+	"github.com/franchb/sigstore/pkg/signature/options"
 	"github.com/transparency-dev/merkle/proof"
 	"github.com/transparency-dev/merkle/rfc6962"
 )

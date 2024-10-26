@@ -28,9 +28,9 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/franchb/sigstore/pkg/signature"
+	"github.com/franchb/sigstore/pkg/signature/options"
 	"github.com/google/go-cmp/cmp"
-	"github.com/sigstore/sigstore/pkg/signature"
-	"github.com/sigstore/sigstore/pkg/signature/options"
 	"golang.org/x/mod/sumdb/note"
 )
 

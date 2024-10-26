@@ -28,15 +28,15 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/log"
+	"github.com/franchb/rekor/pkg/pki"
+	"github.com/franchb/rekor/pkg/pki/pgp"
+	"github.com/franchb/rekor/pkg/types"
+	"github.com/franchb/rekor/pkg/types/helm"
+	"github.com/franchb/rekor/pkg/util"
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/log"
-	"github.com/sigstore/rekor/pkg/pki"
-	"github.com/sigstore/rekor/pkg/pki/pgp"
-	"github.com/sigstore/rekor/pkg/types"
-	"github.com/sigstore/rekor/pkg/types/helm"
-	"github.com/sigstore/rekor/pkg/util"
 	"golang.org/x/sync/errgroup"
 )
 
@@ -285,7 +285,7 @@ func (v V001Entry) validate() error {
 }
 
 func (v V001Entry) CreateFromArtifactProperties(ctx context.Context, props types.ArtifactProperties) (models.ProposedEntry, error) {
-	//TODO: how to select version of item to create
+	// TODO: how to select version of item to create
 	returnVal := models.Helm{}
 	re := V001Entry{}
 

@@ -36,6 +36,10 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/types"
+	"github.com/franchb/sigstore/pkg/signature"
+	sigdsse "github.com/franchb/sigstore/pkg/signature/dsse"
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
@@ -45,10 +49,6 @@ import (
 	slsaCommon "github.com/in-toto/in-toto-golang/in_toto/slsa_provenance/common"
 	slsa "github.com/in-toto/in-toto-golang/in_toto/slsa_provenance/v0.2"
 	"github.com/secure-systems-lab/go-securesystemslib/dsse"
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/types"
-	"github.com/sigstore/sigstore/pkg/signature"
-	sigdsse "github.com/sigstore/sigstore/pkg/signature/dsse"
 	"go.uber.org/goleak"
 )
 
@@ -581,7 +581,7 @@ func TestInsertable(t *testing.T) {
 			entry: V001Entry{
 				DSSEObj: models.DSSEV001Schema{
 					ProposedContent: &models.DSSEV001SchemaProposedContent{
-						//Envelope: swag.String("envelope"),
+						// Envelope: swag.String("envelope"),
 						Verifiers: []strfmt.Base64{
 							[]byte("keys"),
 						},

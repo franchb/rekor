@@ -18,11 +18,11 @@ package state
 import (
 	"encoding/json"
 	"errors"
+	"github.com/mitchellh/go-homedir"
 	"os"
 	"path/filepath"
 
-	"github.com/mitchellh/go-homedir"
-	"github.com/sigstore/rekor/pkg/util"
+	"github.com/franchb/rekor/pkg/util"
 )
 
 type persistedState map[string]*util.SignedCheckpoint

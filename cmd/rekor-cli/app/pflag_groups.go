@@ -22,8 +22,8 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/sigstore/rekor/pkg/pki"
-	"github.com/sigstore/rekor/pkg/types"
+	"github.com/franchb/rekor/pkg/pki"
+	"github.com/franchb/rekor/pkg/types"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )

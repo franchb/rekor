@@ -19,8 +19,8 @@ import (
 	"errors"
 	"fmt"
 
+	"github.com/franchb/rekor/pkg/log"
 	"github.com/jmoiron/sqlx"
-	"github.com/sigstore/rekor/pkg/log"
 
 	// this imports the mysql driver for go
 	_ "github.com/go-sql-driver/mysql"

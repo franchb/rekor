@@ -27,6 +27,7 @@ import (
 	"crypto/tls"
 	"flag"
 	"fmt"
+	"github.com/redis/go-redis/v9"
 	"log"
 	"os"
 	"os/signal"
@@ -35,22 +36,21 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
-	"github.com/redis/go-redis/v9"
 	"sigs.k8s.io/release-utils/version"
 
 	// these imports are to call the packages' init methods
-	_ "github.com/sigstore/rekor/pkg/types/alpine/v0.0.1"
-	_ "github.com/sigstore/rekor/pkg/types/cose/v0.0.1"
-	_ "github.com/sigstore/rekor/pkg/types/dsse/v0.0.1"
-	_ "github.com/sigstore/rekor/pkg/types/hashedrekord/v0.0.1"
-	_ "github.com/sigstore/rekor/pkg/types/helm/v0.0.1"
-	_ "github.com/sigstore/rekor/pkg/types/intoto/v0.0.1"
-	_ "github.com/sigstore/rekor/pkg/types/intoto/v0.0.2"
-	_ "github.com/sigstore/rekor/pkg/types/jar/v0.0.1"
-	_ "github.com/sigstore/rekor/pkg/types/rekord/v0.0.1"
-	_ "github.com/sigstore/rekor/pkg/types/rfc3161/v0.0.1"
-	_ "github.com/sigstore/rekor/pkg/types/rpm/v0.0.1"
-	_ "github.com/sigstore/rekor/pkg/types/tuf/v0.0.1"
+	_ "github.com/franchb/rekor/pkg/types/alpine/v0.0.1"
+	_ "github.com/franchb/rekor/pkg/types/cose/v0.0.1"
+	_ "github.com/franchb/rekor/pkg/types/dsse/v0.0.1"
+	_ "github.com/franchb/rekor/pkg/types/hashedrekord/v0.0.1"
+	_ "github.com/franchb/rekor/pkg/types/helm/v0.0.1"
+	_ "github.com/franchb/rekor/pkg/types/intoto/v0.0.1"
+	_ "github.com/franchb/rekor/pkg/types/intoto/v0.0.2"
+	_ "github.com/franchb/rekor/pkg/types/jar/v0.0.1"
+	_ "github.com/franchb/rekor/pkg/types/rekord/v0.0.1"
+	_ "github.com/franchb/rekor/pkg/types/rfc3161/v0.0.1"
+	_ "github.com/franchb/rekor/pkg/types/rpm/v0.0.1"
+	_ "github.com/franchb/rekor/pkg/types/tuf/v0.0.1"
 )
 
 const (

@@ -23,7 +23,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/sigstore/rekor/pkg/util"
+	"github.com/franchb/rekor/pkg/util"
 )
 
 func TestMinisign(t *testing.T) {

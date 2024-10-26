@@ -30,9 +30,9 @@ import (
 	"github.com/go-openapi/swag"
 	"go.uber.org/goleak"
 
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/types"
-	"github.com/sigstore/rekor/pkg/types/rekord"
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/types"
+	"github.com/franchb/rekor/pkg/types/rekord"
 )
 
 func TestMain(m *testing.M) {
@@ -347,7 +347,7 @@ func TestInsertable(t *testing.T) {
 						Content:   &sig,
 						Format:    swag.String("format"),
 						PublicKey: &models.RekordV001SchemaSignaturePublicKey{
-							//Content: &pub,
+							// Content: &pub,
 						},
 					},
 				},
@@ -383,7 +383,7 @@ func TestInsertable(t *testing.T) {
 					},
 					Signature: &models.RekordV001SchemaSignature{
 						Content: &sig,
-						//Format:  swag.String("format"),
+						// Format:  swag.String("format"),
 						PublicKey: &models.RekordV001SchemaSignaturePublicKey{
 							Content: &pub,
 						},
@@ -400,7 +400,7 @@ func TestInsertable(t *testing.T) {
 						Content: strfmt.Base64([]byte("content")),
 					},
 					Signature: &models.RekordV001SchemaSignature{
-						//Content: &sig,
+						// Content: &sig,
 						Format: swag.String("format"),
 						PublicKey: &models.RekordV001SchemaSignaturePublicKey{
 							Content: &pub,
@@ -435,7 +435,7 @@ func TestInsertable(t *testing.T) {
 			entry: V001Entry{
 				RekordObj: models.RekordV001Schema{
 					Data: &models.RekordV001SchemaData{
-						//Content: strfmt.Base64([]byte("content")),
+						// Content: strfmt.Base64([]byte("content")),
 					},
 					Signature: &models.RekordV001SchemaSignature{
 						Content: &sig,

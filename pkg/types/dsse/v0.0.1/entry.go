@@ -35,14 +35,14 @@ import (
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/log"
-	"github.com/sigstore/rekor/pkg/pki"
-	"github.com/sigstore/rekor/pkg/pki/x509"
-	"github.com/sigstore/rekor/pkg/types"
-	dsseType "github.com/sigstore/rekor/pkg/types/dsse"
-	"github.com/sigstore/sigstore/pkg/signature"
-	sigdsse "github.com/sigstore/sigstore/pkg/signature/dsse"
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/log"
+	"github.com/franchb/rekor/pkg/pki"
+	"github.com/franchb/rekor/pkg/pki/x509"
+	"github.com/franchb/rekor/pkg/types"
+	dsseType "github.com/franchb/rekor/pkg/types/dsse"
+	"github.com/franchb/sigstore/pkg/signature"
+	sigdsse "github.com/franchb/sigstore/pkg/signature/dsse"
 )
 
 const (

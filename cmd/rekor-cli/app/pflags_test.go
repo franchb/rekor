@@ -26,7 +26,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/sigstore/rekor/pkg/types"
+	"github.com/franchb/rekor/pkg/types"
 )
 
 func TestArtifactPFlags(t *testing.T) {

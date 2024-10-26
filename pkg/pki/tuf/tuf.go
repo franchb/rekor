@@ -27,9 +27,9 @@ import (
 	"time"
 
 	"github.com/cyberphone/json-canonicalization/go/src/webpki.org/jsoncanonicalizer"
-	"github.com/sigstore/rekor/pkg/pki/identity"
-	"github.com/sigstore/sigstore/pkg/cryptoutils"
-	sigsig "github.com/sigstore/sigstore/pkg/signature"
+	"github.com/franchb/rekor/pkg/pki/identity"
+	"github.com/franchb/sigstore/pkg/cryptoutils"
+	sigsig "github.com/franchb/sigstore/pkg/signature"
 	"github.com/theupdateframework/go-tuf/data"
 	"github.com/theupdateframework/go-tuf/pkg/keys"
 	"github.com/theupdateframework/go-tuf/verify"

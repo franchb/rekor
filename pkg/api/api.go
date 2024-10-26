@@ -22,31 +22,31 @@ import (
 	"crypto/x509"
 	"encoding/hex"
 	"fmt"
+	"github.com/redis/go-redis/v9"
 	"os"
 	"path/filepath"
 	"strings"
 
 	"github.com/google/trillian"
-	"github.com/redis/go-redis/v9"
 	"github.com/spf13/viper"
 	"golang.org/x/exp/slices"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/credentials/insecure"
 
-	"github.com/sigstore/rekor/pkg/indexstorage"
-	"github.com/sigstore/rekor/pkg/log"
-	"github.com/sigstore/rekor/pkg/pubsub"
-	"github.com/sigstore/rekor/pkg/sharding"
-	"github.com/sigstore/rekor/pkg/signer"
-	"github.com/sigstore/rekor/pkg/storage"
-	"github.com/sigstore/rekor/pkg/trillianclient"
-	"github.com/sigstore/rekor/pkg/witness"
-	"github.com/sigstore/sigstore/pkg/cryptoutils"
-	"github.com/sigstore/sigstore/pkg/signature"
-	"github.com/sigstore/sigstore/pkg/signature/options"
+	"github.com/franchb/rekor/pkg/indexstorage"
+	"github.com/franchb/rekor/pkg/log"
+	"github.com/franchb/rekor/pkg/pubsub"
+	"github.com/franchb/rekor/pkg/sharding"
+	"github.com/franchb/rekor/pkg/signer"
+	"github.com/franchb/rekor/pkg/storage"
+	"github.com/franchb/rekor/pkg/trillianclient"
+	"github.com/franchb/rekor/pkg/witness"
+	"github.com/franchb/sigstore/pkg/cryptoutils"
+	"github.com/franchb/sigstore/pkg/signature"
+	"github.com/franchb/sigstore/pkg/signature/options"
 
-	_ "github.com/sigstore/rekor/pkg/pubsub/gcp" // Load GCP pubsub implementation
+	_ "github.com/franchb/rekor/pkg/pubsub/gcp" // Load GCP pubsub implementation
 )
 
 func dial(rpcServer string) (*grpc.ClientConn, error) {

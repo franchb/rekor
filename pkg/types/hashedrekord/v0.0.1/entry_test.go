@@ -34,15 +34,15 @@ import (
 	"reflect"
 	"testing"
 
+	"github.com/franchb/rekor/pkg/generated/models"
+	x509r "github.com/franchb/rekor/pkg/pki/x509"
+	"github.com/franchb/rekor/pkg/types"
+	"github.com/franchb/sigstore/pkg/cryptoutils"
+	"github.com/franchb/sigstore/pkg/signature"
+	"github.com/franchb/sigstore/pkg/signature/options"
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
-	"github.com/sigstore/rekor/pkg/generated/models"
-	x509r "github.com/sigstore/rekor/pkg/pki/x509"
-	"github.com/sigstore/rekor/pkg/types"
-	"github.com/sigstore/sigstore/pkg/cryptoutils"
-	"github.com/sigstore/sigstore/pkg/signature"
-	"github.com/sigstore/sigstore/pkg/signature/options"
 	"go.uber.org/goleak"
 )
 

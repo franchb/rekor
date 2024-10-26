@@ -29,10 +29,10 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/franchb/rekor/pkg/pki/identity"
+	"github.com/franchb/rekor/pkg/pki/x509/testutils"
+	"github.com/franchb/sigstore/pkg/cryptoutils"
 	"github.com/sassoftware/relic/lib/pkcs7"
-	"github.com/sigstore/rekor/pkg/pki/identity"
-	"github.com/sigstore/rekor/pkg/pki/x509/testutils"
-	"github.com/sigstore/sigstore/pkg/cryptoutils"
 )
 
 const pkcsECDSAPEM = `-----BEGIN PKCS7-----

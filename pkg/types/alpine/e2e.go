@@ -33,9 +33,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/sigstore/rekor/pkg/util"
+	"github.com/franchb/rekor/pkg/util"
 
-	sigx509 "github.com/sigstore/rekor/pkg/pki/x509"
+	sigx509 "github.com/franchb/rekor/pkg/pki/x509"
 )
 
 func CreateSignedApk(t *testing.T, artifactPath string) {

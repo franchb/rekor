@@ -18,8 +18,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/sigstore/rekor/pkg/indexstorage/mysql"
-	"github.com/sigstore/rekor/pkg/indexstorage/redis"
+	"github.com/franchb/rekor/pkg/indexstorage/mysql"
+	"github.com/franchb/rekor/pkg/indexstorage/redis"
 	"github.com/spf13/viper"
 )
 

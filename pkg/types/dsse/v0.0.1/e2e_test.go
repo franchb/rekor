@@ -36,6 +36,11 @@ import (
 	"testing"
 	"time"
 
+	"github.com/franchb/rekor/pkg/client"
+	"github.com/franchb/rekor/pkg/generated/client/entries"
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/types"
+	"github.com/franchb/sigstore/pkg/signature"
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
@@ -43,14 +48,9 @@ import (
 	"github.com/in-toto/in-toto-golang/in_toto/slsa_provenance/common"
 	slsa "github.com/in-toto/in-toto-golang/in_toto/slsa_provenance/v0.2"
 	"github.com/secure-systems-lab/go-securesystemslib/dsse"
-	"github.com/sigstore/rekor/pkg/client"
-	"github.com/sigstore/rekor/pkg/generated/client/entries"
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/types"
-	"github.com/sigstore/sigstore/pkg/signature"
 
-	sigx509 "github.com/sigstore/rekor/pkg/pki/x509"
-	"github.com/sigstore/rekor/pkg/util"
+	sigx509 "github.com/franchb/rekor/pkg/pki/x509"
+	"github.com/franchb/rekor/pkg/util"
 )
 
 func rekorServer() string {
@@ -545,7 +545,7 @@ func TestNoSignature(t *testing.T) {
 
 	ap := types.ArtifactProperties{
 		ArtifactBytes:  eb,
-		PublicKeyBytes: [][]byte{[]byte(sigx509.ECDSAPub)}, //, []byte(sigx509.ECDSAPub)},
+		PublicKeyBytes: [][]byte{[]byte(sigx509.ECDSAPub)}, // , []byte(sigx509.ECDSAPub)},
 	}
 
 	ei := NewEntry()

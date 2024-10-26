@@ -20,11 +20,11 @@ import (
 	"encoding/hex"
 	"fmt"
 
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/types"
 	"github.com/go-openapi/runtime"
 	rekor_pb_common "github.com/sigstore/protobuf-specs/gen/pb-go/common/v1"
 	rekor_pb "github.com/sigstore/protobuf-specs/gen/pb-go/rekor/v1"
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/types"
 	"google.golang.org/protobuf/encoding/protojson"
 )
 

@@ -21,15 +21,13 @@ import (
 	"crypto"
 	"strings"
 
-	"github.com/sigstore/sigstore/pkg/signature"
-	"github.com/sigstore/sigstore/pkg/signature/kms"
-	"golang.org/x/exp/slices"
+	"github.com/franchb/sigstore/pkg/signature"
+	"github.com/franchb/sigstore/pkg/signature/kms"
+	"slices"
 
 	// these are imported to load the providers via init() calls
-	_ "github.com/sigstore/sigstore/pkg/signature/kms/aws"
-	_ "github.com/sigstore/sigstore/pkg/signature/kms/azure"
-	_ "github.com/sigstore/sigstore/pkg/signature/kms/gcp"
-	_ "github.com/sigstore/sigstore/pkg/signature/kms/hashivault"
+	_ "github.com/franchb/sigstore/pkg/signature/kms/hashivault"
+	_ "github.com/franchb/sigstore/pkg/signature/kms/yckms"
 )
 
 func New(ctx context.Context, signer, pass, tinkKEKURI, tinkKeysetPath string) (signature.Signer, error) {

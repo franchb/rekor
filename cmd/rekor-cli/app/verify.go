@@ -26,14 +26,14 @@ import (
 	"github.com/spf13/viper"
 	"github.com/transparency-dev/merkle/rfc6962"
 
-	"github.com/sigstore/rekor/cmd/rekor-cli/app/format"
-	"github.com/sigstore/rekor/pkg/client"
-	"github.com/sigstore/rekor/pkg/generated/client/entries"
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/log"
-	"github.com/sigstore/rekor/pkg/sharding"
-	"github.com/sigstore/rekor/pkg/types"
-	"github.com/sigstore/rekor/pkg/verify"
+	"github.com/franchb/rekor/cmd/rekor-cli/app/format"
+	"github.com/franchb/rekor/pkg/client"
+	"github.com/franchb/rekor/pkg/generated/client/entries"
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/log"
+	"github.com/franchb/rekor/pkg/sharding"
+	"github.com/franchb/rekor/pkg/types"
+	"github.com/franchb/rekor/pkg/verify"
 )
 
 type verifyCmdOutput struct {

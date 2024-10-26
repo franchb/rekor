@@ -29,10 +29,10 @@ import (
 	"io"
 	"strings"
 
+	"github.com/franchb/rekor/pkg/pki/identity"
+	"github.com/franchb/sigstore/pkg/cryptoutils"
+	sigsig "github.com/franchb/sigstore/pkg/signature"
 	"github.com/sassoftware/relic/lib/pkcs7"
-	"github.com/sigstore/rekor/pkg/pki/identity"
-	"github.com/sigstore/sigstore/pkg/cryptoutils"
-	sigsig "github.com/sigstore/sigstore/pkg/signature"
 )
 
 // EmailAddressOID defined by https://oidref.com/1.2.840.113549.1.9.1
@@ -181,7 +181,7 @@ func (k PublicKey) CanonicalValue() ([]byte, error) {
 	if k.rawCert == nil {
 		return nil, errors.New("PKCS7 public key has not been initialized")
 	}
-	//TODO: should we export the entire cert chain, not just the first one?
+	// TODO: should we export the entire cert chain, not just the first one?
 	p := pem.Block{
 		Type:  "CERTIFICATE",
 		Bytes: k.rawCert,

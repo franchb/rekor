@@ -19,10 +19,10 @@ package api
 import (
 	"net/http"
 
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/generated/restapi/operations/pubkey"
 	"github.com/go-openapi/runtime/middleware"
 	"github.com/go-openapi/swag"
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/generated/restapi/operations/pubkey"
 )
 
 func GetPublicKeyHandler(params pubkey.GetPublicKeyParams) middleware.Responder {

@@ -36,6 +36,11 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/franchb/rekor/pkg/generated/models"
+	pkix509 "github.com/franchb/rekor/pkg/pki/x509"
+	"github.com/franchb/rekor/pkg/types"
+	"github.com/franchb/sigstore/pkg/signature"
+	dsse_signer "github.com/franchb/sigstore/pkg/signature/dsse"
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
@@ -45,11 +50,6 @@ import (
 	"github.com/in-toto/in-toto-golang/in_toto/slsa_provenance/common"
 	slsa "github.com/in-toto/in-toto-golang/in_toto/slsa_provenance/v0.2"
 	"github.com/secure-systems-lab/go-securesystemslib/dsse"
-	"github.com/sigstore/rekor/pkg/generated/models"
-	pkix509 "github.com/sigstore/rekor/pkg/pki/x509"
-	"github.com/sigstore/rekor/pkg/types"
-	"github.com/sigstore/sigstore/pkg/signature"
-	dsse_signer "github.com/sigstore/sigstore/pkg/signature/dsse"
 	"go.uber.org/goleak"
 )
 

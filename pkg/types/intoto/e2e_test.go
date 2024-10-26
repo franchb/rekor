@@ -36,18 +36,18 @@ import (
 	"path/filepath"
 	"testing"
 
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/sharding"
+	"github.com/franchb/rekor/pkg/types"
+	"github.com/franchb/sigstore/pkg/signature"
 	"github.com/google/go-cmp/cmp"
 	"github.com/in-toto/in-toto-golang/in_toto"
 	"github.com/in-toto/in-toto-golang/in_toto/slsa_provenance/common"
 	slsa "github.com/in-toto/in-toto-golang/in_toto/slsa_provenance/v0.2"
 	"github.com/secure-systems-lab/go-securesystemslib/dsse"
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/sharding"
-	"github.com/sigstore/rekor/pkg/types"
-	"github.com/sigstore/sigstore/pkg/signature"
 
-	sigx509 "github.com/sigstore/rekor/pkg/pki/x509"
-	"github.com/sigstore/rekor/pkg/util"
+	sigx509 "github.com/franchb/rekor/pkg/pki/x509"
+	"github.com/franchb/rekor/pkg/util"
 )
 
 func rekorServer() string {

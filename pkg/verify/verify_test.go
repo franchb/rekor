@@ -21,14 +21,14 @@ import (
 	"encoding/hex"
 	"testing"
 
+	"github.com/franchb/rekor/pkg/generated/client"
+	"github.com/franchb/rekor/pkg/generated/client/tlog"
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/util"
+	"github.com/franchb/sigstore/pkg/signature"
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
-	"github.com/sigstore/rekor/pkg/generated/client"
-	"github.com/sigstore/rekor/pkg/generated/client/tlog"
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/util"
-	"github.com/sigstore/sigstore/pkg/signature"
 )
 
 type TlogClient struct {

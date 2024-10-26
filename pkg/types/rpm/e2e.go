@@ -19,7 +19,7 @@ package rpm
 
 import (
 	"bytes"
-	"github.com/sigstore/rekor/pkg/util"
+	"github.com/franchb/rekor/pkg/util"
 	"io/ioutil"
 	"os"
 	"testing"

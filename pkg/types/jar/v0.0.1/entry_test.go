@@ -24,11 +24,11 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/types"
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/types"
 	"github.com/spf13/viper"
 	"go.uber.org/goleak"
 )
@@ -224,7 +224,7 @@ func TestInsertable(t *testing.T) {
 			entry: V001Entry{
 				JARModel: models.JarV001Schema{
 					Archive: &models.JarV001SchemaArchive{
-						//Content: strfmt.Base64([]byte("content")),
+						// Content: strfmt.Base64([]byte("content")),
 					},
 				},
 			},

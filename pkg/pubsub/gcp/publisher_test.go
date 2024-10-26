@@ -20,7 +20,7 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"github.com/sigstore/rekor/pkg/events"
+	"github.com/franchb/rekor/pkg/events"
 	"google.golang.org/protobuf/types/known/emptypb"
 )
 

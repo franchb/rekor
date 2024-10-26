@@ -28,33 +28,33 @@ import (
 	"github.com/spf13/viper"
 	"sigs.k8s.io/release-utils/version"
 
-	"github.com/sigstore/rekor/pkg/api"
-	"github.com/sigstore/rekor/pkg/generated/restapi"
-	"github.com/sigstore/rekor/pkg/generated/restapi/operations"
-	"github.com/sigstore/rekor/pkg/log"
-	"github.com/sigstore/rekor/pkg/types/alpine"
-	alpine_v001 "github.com/sigstore/rekor/pkg/types/alpine/v0.0.1"
-	"github.com/sigstore/rekor/pkg/types/cose"
-	cose_v001 "github.com/sigstore/rekor/pkg/types/cose/v0.0.1"
-	"github.com/sigstore/rekor/pkg/types/dsse"
-	dsse_v001 "github.com/sigstore/rekor/pkg/types/dsse/v0.0.1"
-	hashedrekord "github.com/sigstore/rekor/pkg/types/hashedrekord"
-	hashedrekord_v001 "github.com/sigstore/rekor/pkg/types/hashedrekord/v0.0.1"
-	"github.com/sigstore/rekor/pkg/types/helm"
-	helm_v001 "github.com/sigstore/rekor/pkg/types/helm/v0.0.1"
-	"github.com/sigstore/rekor/pkg/types/intoto"
-	intoto_v001 "github.com/sigstore/rekor/pkg/types/intoto/v0.0.1"
-	intoto_v002 "github.com/sigstore/rekor/pkg/types/intoto/v0.0.2"
-	"github.com/sigstore/rekor/pkg/types/jar"
-	jar_v001 "github.com/sigstore/rekor/pkg/types/jar/v0.0.1"
-	"github.com/sigstore/rekor/pkg/types/rekord"
-	rekord_v001 "github.com/sigstore/rekor/pkg/types/rekord/v0.0.1"
-	"github.com/sigstore/rekor/pkg/types/rfc3161"
-	rfc3161_v001 "github.com/sigstore/rekor/pkg/types/rfc3161/v0.0.1"
-	"github.com/sigstore/rekor/pkg/types/rpm"
-	rpm_v001 "github.com/sigstore/rekor/pkg/types/rpm/v0.0.1"
-	"github.com/sigstore/rekor/pkg/types/tuf"
-	tuf_v001 "github.com/sigstore/rekor/pkg/types/tuf/v0.0.1"
+	"github.com/franchb/rekor/pkg/api"
+	"github.com/franchb/rekor/pkg/generated/restapi"
+	"github.com/franchb/rekor/pkg/generated/restapi/operations"
+	"github.com/franchb/rekor/pkg/log"
+	"github.com/franchb/rekor/pkg/types/alpine"
+	alpine_v001 "github.com/franchb/rekor/pkg/types/alpine/v0.0.1"
+	"github.com/franchb/rekor/pkg/types/cose"
+	cose_v001 "github.com/franchb/rekor/pkg/types/cose/v0.0.1"
+	"github.com/franchb/rekor/pkg/types/dsse"
+	dsse_v001 "github.com/franchb/rekor/pkg/types/dsse/v0.0.1"
+	hashedrekord "github.com/franchb/rekor/pkg/types/hashedrekord"
+	hashedrekord_v001 "github.com/franchb/rekor/pkg/types/hashedrekord/v0.0.1"
+	"github.com/franchb/rekor/pkg/types/helm"
+	helm_v001 "github.com/franchb/rekor/pkg/types/helm/v0.0.1"
+	"github.com/franchb/rekor/pkg/types/intoto"
+	intoto_v001 "github.com/franchb/rekor/pkg/types/intoto/v0.0.1"
+	intoto_v002 "github.com/franchb/rekor/pkg/types/intoto/v0.0.2"
+	"github.com/franchb/rekor/pkg/types/jar"
+	jar_v001 "github.com/franchb/rekor/pkg/types/jar/v0.0.1"
+	"github.com/franchb/rekor/pkg/types/rekord"
+	rekord_v001 "github.com/franchb/rekor/pkg/types/rekord/v0.0.1"
+	"github.com/franchb/rekor/pkg/types/rfc3161"
+	rfc3161_v001 "github.com/franchb/rekor/pkg/types/rfc3161/v0.0.1"
+	"github.com/franchb/rekor/pkg/types/rpm"
+	rpm_v001 "github.com/franchb/rekor/pkg/types/rpm/v0.0.1"
+	"github.com/franchb/rekor/pkg/types/tuf"
+	tuf_v001 "github.com/franchb/rekor/pkg/types/tuf/v0.0.1"
 )
 
 // serveCmd represents the serve command
@@ -66,7 +66,7 @@ var serveCmd = &cobra.Command{
 		// Setup the logger to dev/prod
 		log.ConfigureLogger(viper.GetString("log_type"), viper.GetString("trace-string-prefix"))
 
-		// workaround for https://github.com/sigstore/rekor/issues/68
+		// workaround for https://github.com/franchb/rekor/issues/68
 		// from https://github.com/golang/glog/commit/fca8c8854093a154ff1eb580aae10276ad6b1b5f
 		_ = flag.CommandLine.Parse([]string{})
 
@@ -100,8 +100,8 @@ var serveCmd = &cobra.Command{
 				log.Logger.Error(err)
 			}
 		}()
-		//TODO: make this a config option for server to load via viper field
-		//TODO: add command line option to print versions supported in binary
+		// TODO: make this a config option for server to load via viper field
+		// TODO: add command line option to print versions supported in binary
 
 		// these trigger loading of package and therefore init() methods to run
 		pluggableTypeMap := map[string][]string{

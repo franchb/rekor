@@ -23,10 +23,10 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/sigstore/rekor/cmd/rekor-cli/app/format"
-	"github.com/sigstore/rekor/pkg/client"
-	"github.com/sigstore/rekor/pkg/generated/client/tlog"
-	"github.com/sigstore/rekor/pkg/log"
+	"github.com/franchb/rekor/cmd/rekor-cli/app/format"
+	"github.com/franchb/rekor/pkg/client"
+	"github.com/franchb/rekor/pkg/generated/client/tlog"
+	"github.com/franchb/rekor/pkg/log"
 )
 
 type logProofOutput struct {

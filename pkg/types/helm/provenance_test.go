@@ -20,8 +20,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/pki/pgp"
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/pki/pgp"
 )
 
 func TestProvenance(t *testing.T) {
