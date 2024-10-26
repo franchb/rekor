@@ -21,7 +21,7 @@ import (
 	"crypto/elliptic"
 	"crypto/rand"
 
-	"github.com/sigstore/sigstore/pkg/signature"
+	"github.com/franchb/sigstore/pkg/signature"
 )
 
 const MemoryScheme = "memory"

@@ -21,8 +21,8 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/log"
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/log"
 	"golang.org/x/exp/slices"
 )
 

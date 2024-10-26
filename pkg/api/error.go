@@ -24,12 +24,12 @@ import (
 	"github.com/go-openapi/strfmt"
 	"github.com/mitchellh/mapstructure"
 
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/generated/restapi/operations/entries"
-	"github.com/sigstore/rekor/pkg/generated/restapi/operations/index"
-	"github.com/sigstore/rekor/pkg/generated/restapi/operations/pubkey"
-	"github.com/sigstore/rekor/pkg/generated/restapi/operations/tlog"
-	"github.com/sigstore/rekor/pkg/log"
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/generated/restapi/operations/entries"
+	"github.com/franchb/rekor/pkg/generated/restapi/operations/index"
+	"github.com/franchb/rekor/pkg/generated/restapi/operations/pubkey"
+	"github.com/franchb/rekor/pkg/generated/restapi/operations/tlog"
+	"github.com/franchb/rekor/pkg/log"
 )
 
 const (

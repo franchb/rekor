@@ -20,7 +20,7 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/sigstore/rekor/pkg/types"
+	"github.com/franchb/rekor/pkg/types"
 )
 
 func FuzzHashedRekord(f *testing.F) {

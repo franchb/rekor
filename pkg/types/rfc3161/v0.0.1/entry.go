@@ -28,15 +28,15 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/sigstore/rekor/pkg/pki"
-	"github.com/sigstore/rekor/pkg/types/rfc3161"
+	"github.com/franchb/rekor/pkg/pki"
+	"github.com/franchb/rekor/pkg/types/rfc3161"
 
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/log"
+	"github.com/franchb/rekor/pkg/types"
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/sassoftware/relic/lib/pkcs9"
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/log"
-	"github.com/sigstore/rekor/pkg/types"
 )
 
 const (

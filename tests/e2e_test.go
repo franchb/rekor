@@ -40,23 +40,23 @@ import (
 
 	"cloud.google.com/go/pubsub"
 	"github.com/cyberphone/json-canonicalization/go/src/webpki.org/jsoncanonicalizer"
+	"github.com/franchb/rekor/pkg/client"
+	generatedClient "github.com/franchb/rekor/pkg/generated/client"
+	"github.com/franchb/rekor/pkg/generated/client/entries"
+	"github.com/franchb/rekor/pkg/generated/client/pubkey"
+	"github.com/franchb/rekor/pkg/generated/models"
+	sigx509 "github.com/franchb/rekor/pkg/pki/x509"
+	"github.com/franchb/rekor/pkg/sharding"
+	"github.com/franchb/rekor/pkg/signer"
+	_ "github.com/franchb/rekor/pkg/types/intoto/v0.0.1"
+	rekord "github.com/franchb/rekor/pkg/types/rekord/v0.0.1"
+	"github.com/franchb/sigstore/pkg/cryptoutils"
+	"github.com/franchb/sigstore/pkg/signature"
+	"github.com/franchb/sigstore/pkg/signature/options"
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"github.com/sigstore/rekor/pkg/client"
-	generatedClient "github.com/sigstore/rekor/pkg/generated/client"
-	"github.com/sigstore/rekor/pkg/generated/client/entries"
-	"github.com/sigstore/rekor/pkg/generated/client/pubkey"
-	"github.com/sigstore/rekor/pkg/generated/models"
-	sigx509 "github.com/sigstore/rekor/pkg/pki/x509"
-	"github.com/sigstore/rekor/pkg/sharding"
-	"github.com/sigstore/rekor/pkg/signer"
-	_ "github.com/sigstore/rekor/pkg/types/intoto/v0.0.1"
-	rekord "github.com/sigstore/rekor/pkg/types/rekord/v0.0.1"
-	"github.com/sigstore/sigstore/pkg/cryptoutils"
-	"github.com/sigstore/sigstore/pkg/signature"
-	"github.com/sigstore/sigstore/pkg/signature/options"
 )
 
 func getUUIDFromUploadOutput(t *testing.T, out string) string {
@@ -383,7 +383,7 @@ func TestEntryUpload(t *testing.T) {
 	}
 }
 
-// Regression test for https://github.com/sigstore/rekor/pull/956
+// Regression test for https://github.com/franchb/rekor/pull/956
 // Requesting an inclusion proof concurrently with an entry write triggers
 // a race where the inclusion proof returned does not verify because the
 // tree head changes.
@@ -505,7 +505,7 @@ func getTotalTreeSize(t *testing.T) int64 {
 }
 
 // This test confirms that we validate tree ID when using the /api/v1/log/entries/retrieve endpoint
-// https://github.com/sigstore/rekor/issues/1014
+// https://github.com/franchb/rekor/issues/1014
 func TestSearchValidateTreeID(t *testing.T) {
 	// Create something and add it to the log
 	artifactPath := filepath.Join(t.TempDir(), "artifact")

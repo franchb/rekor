@@ -25,7 +25,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/sigstore/sigstore/pkg/cryptoutils"
+	"github.com/franchb/sigstore/pkg/cryptoutils"
 	_ "github.com/theupdateframework/go-tuf/pkg/deprecated/set_ecdsa"
 	"github.com/theupdateframework/go-tuf/verify"
 )

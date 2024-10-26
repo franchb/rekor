@@ -20,7 +20,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/sigstore/rekor/pkg/log"
+	"github.com/franchb/rekor/pkg/log"
 
 	"github.com/spf13/viper"
 	"gocloud.dev/blob"

@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/sigstore/rekor/pkg/log"
+	"github.com/franchb/rekor/pkg/log"
 	"github.com/transparency-dev/merkle/proof"
 	"github.com/transparency-dev/merkle/rfc6962"
 

@@ -20,7 +20,7 @@ package main
 import (
 	"testing"
 
-	"github.com/sigstore/rekor/pkg/util"
+	"github.com/franchb/rekor/pkg/util"
 )
 
 func TestVerifyNonExistentIndex(t *testing.T) {

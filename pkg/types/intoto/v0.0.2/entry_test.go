@@ -34,6 +34,9 @@ import (
 	"sort"
 	"testing"
 
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/types"
+	"github.com/franchb/sigstore/pkg/signature"
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
@@ -43,9 +46,6 @@ import (
 	"github.com/in-toto/in-toto-golang/in_toto/slsa_provenance/common"
 	slsa "github.com/in-toto/in-toto-golang/in_toto/slsa_provenance/v0.2"
 	"github.com/secure-systems-lab/go-securesystemslib/dsse"
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/types"
-	"github.com/sigstore/sigstore/pkg/signature"
 	"go.uber.org/goleak"
 )
 
@@ -607,7 +607,7 @@ func TestInsertable(t *testing.T) {
 							Signatures: []*models.IntotoV002SchemaContentEnvelopeSignaturesItems0{
 								{
 									PublicKey: &keyBytes,
-									//Sig:       strfmt.Base64([]byte("sig")),
+									// Sig:       strfmt.Base64([]byte("sig")),
 								},
 							},
 						},
@@ -627,7 +627,7 @@ func TestInsertable(t *testing.T) {
 							PayloadType: swag.String("payloadType"),
 							Signatures: []*models.IntotoV002SchemaContentEnvelopeSignaturesItems0{
 								{
-									//PublicKey: strfmt.Base64([]byte("key")),
+									// PublicKey: strfmt.Base64([]byte("key")),
 									Sig: &sigBytes,
 								},
 							},
@@ -669,7 +669,7 @@ func TestInsertable(t *testing.T) {
 					Content: &models.IntotoV002SchemaContent{
 						Envelope: &models.IntotoV002SchemaContentEnvelope{
 							Payload: strfmt.Base64("payload"),
-							//PayloadType: swag.String("payloadType"),
+							// PayloadType: swag.String("payloadType"),
 							Signatures: []*models.IntotoV002SchemaContentEnvelopeSignaturesItems0{
 								{
 									PublicKey: &keyBytes,
@@ -689,7 +689,7 @@ func TestInsertable(t *testing.T) {
 				IntotoObj: models.IntotoV002Schema{
 					Content: &models.IntotoV002SchemaContent{
 						Envelope: &models.IntotoV002SchemaContentEnvelope{
-							//Payload:     strfmt.Base64("payload"),
+							// Payload:     strfmt.Base64("payload"),
 							PayloadType: swag.String("payloadType"),
 							Signatures: []*models.IntotoV002SchemaContentEnvelopeSignaturesItems0{
 								{

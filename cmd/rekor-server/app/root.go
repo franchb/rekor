@@ -22,9 +22,9 @@ import (
 	"os"
 	"time"
 
+	"github.com/franchb/rekor/pkg/log"
 	"github.com/go-chi/chi/middleware"
 	homedir "github.com/mitchellh/go-homedir"
-	"github.com/sigstore/rekor/pkg/log"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 

@@ -29,7 +29,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/sigstore/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/generated/models"
 )
 
 const (

@@ -23,7 +23,7 @@ import (
 	"github.com/spf13/viper"
 
 	fuzz "github.com/AdamKorcz/go-fuzz-headers-1"
-	utils "github.com/sigstore/rekor/pkg/fuzz"
+	utils "github.com/franchb/rekor/pkg/fuzz"
 )
 
 func init() {

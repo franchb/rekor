@@ -24,10 +24,10 @@ import (
 	fuzz "github.com/AdamKorcz/go-fuzz-headers-1"
 	"github.com/go-openapi/swag"
 
-	fuzzUtils "github.com/sigstore/rekor/pkg/fuzz"
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/types"
-	"github.com/sigstore/rekor/pkg/types/helm"
+	fuzzUtils "github.com/franchb/rekor/pkg/fuzz"
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/types"
+	"github.com/franchb/rekor/pkg/types/helm"
 )
 
 var initter sync.Once

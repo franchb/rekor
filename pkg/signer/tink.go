@@ -21,14 +21,14 @@ import (
 	"path/filepath"
 	"strings"
 
-	tinkUtils "github.com/sigstore/rekor/pkg/signer/tink"
+	tinkUtils "github.com/franchb/rekor/pkg/signer/tink"
 	"github.com/tink-crypto/tink-go-awskms/v2/integration/awskms"
 	"github.com/tink-crypto/tink-go-gcpkms/v2/integration/gcpkms"
 	"github.com/tink-crypto/tink-go/v2/core/registry"
 	"github.com/tink-crypto/tink-go/v2/keyset"
 	"github.com/tink-crypto/tink-go/v2/tink"
 
-	"github.com/sigstore/sigstore/pkg/signature"
+	"github.com/franchb/sigstore/pkg/signature"
 )
 
 const TinkScheme = "tink"

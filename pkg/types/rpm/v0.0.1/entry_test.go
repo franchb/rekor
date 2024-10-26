@@ -28,8 +28,8 @@ import (
 	"github.com/go-openapi/swag"
 	"go.uber.org/goleak"
 
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/types"
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/types"
 )
 
 func TestMain(m *testing.M) {
@@ -256,7 +256,7 @@ func TestInsertable(t *testing.T) {
 						Content: strfmt.Base64([]byte("content")),
 					},
 					PublicKey: &models.RpmV001SchemaPublicKey{
-						//Content: &pub,
+						// Content: &pub,
 					},
 				},
 			},
@@ -283,7 +283,7 @@ func TestInsertable(t *testing.T) {
 			entry: V001Entry{
 				RPMModel: models.RpmV001Schema{
 					Package: &models.RpmV001SchemaPackage{
-						//Content: strfmt.Base64([]byte("content")),
+						// Content: strfmt.Base64([]byte("content")),
 					},
 					PublicKey: &models.RpmV001SchemaPublicKey{
 						Content: &pub,

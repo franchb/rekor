@@ -27,10 +27,10 @@ import (
 
 	jarutils "github.com/sassoftware/relic/lib/signjar"
 
-	fuzzUtils "github.com/sigstore/rekor/pkg/fuzz"
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/types"
-	"github.com/sigstore/rekor/pkg/types/jar"
+	fuzzUtils "github.com/franchb/rekor/pkg/fuzz"
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/types"
+	"github.com/franchb/rekor/pkg/types/jar"
 )
 
 var initter sync.Once

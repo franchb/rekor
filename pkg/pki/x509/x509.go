@@ -29,9 +29,9 @@ import (
 	"strings"
 
 	"github.com/asaskevich/govalidator"
-	"github.com/sigstore/rekor/pkg/pki/identity"
-	"github.com/sigstore/sigstore/pkg/cryptoutils"
-	sigsig "github.com/sigstore/sigstore/pkg/signature"
+	"github.com/franchb/rekor/pkg/pki/identity"
+	"github.com/franchb/sigstore/pkg/cryptoutils"
+	sigsig "github.com/franchb/sigstore/pkg/signature"
 )
 
 // EmailAddressOID defined by https://oidref.com/1.2.840.113549.1.9.1

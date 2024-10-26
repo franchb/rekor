@@ -26,8 +26,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/sigstore/rekor/pkg/pki"
-	"github.com/sigstore/rekor/pkg/sharding"
+	"github.com/franchb/rekor/pkg/pki"
+	"github.com/franchb/rekor/pkg/sharding"
 
 	"github.com/spf13/pflag"
 

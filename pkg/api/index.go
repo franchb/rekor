@@ -26,10 +26,10 @@ import (
 	"github.com/go-openapi/runtime/middleware"
 	"github.com/go-openapi/swag"
 
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/generated/restapi/operations/index"
-	"github.com/sigstore/rekor/pkg/pki"
-	"github.com/sigstore/rekor/pkg/util"
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/generated/restapi/operations/index"
+	"github.com/franchb/rekor/pkg/pki"
+	"github.com/franchb/rekor/pkg/util"
 )
 
 func SearchIndexHandler(params index.SearchIndexParams) middleware.Responder {

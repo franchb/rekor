@@ -16,6 +16,7 @@ package client
 
 import (
 	"crypto/tls"
+	"github.com/hashicorp/go-cleanhttp"
 	"net/http"
 	"net/url"
 
@@ -23,10 +24,9 @@ import (
 	httptransport "github.com/go-openapi/runtime/client"
 	"github.com/go-openapi/strfmt"
 
-	"github.com/hashicorp/go-cleanhttp"
+	"github.com/franchb/rekor/pkg/generated/client"
+	"github.com/franchb/rekor/pkg/util"
 	retryablehttp "github.com/hashicorp/go-retryablehttp"
-	"github.com/sigstore/rekor/pkg/generated/client"
-	"github.com/sigstore/rekor/pkg/util"
 )
 
 func GetRekorClient(rekorServerURL string, opts ...Option) (*client.Rekor, error) {

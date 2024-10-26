@@ -35,8 +35,8 @@ import (
 	"github.com/go-openapi/swag"
 	"go.uber.org/goleak"
 
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/types"
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/types"
 )
 
 func TestMain(m *testing.M) {
@@ -293,7 +293,7 @@ func TestInsertable(t *testing.T) {
 						Content: &tsr,
 					},
 				},
-				//tsrContent: &tsr,
+				// tsrContent: &tsr,
 			},
 			expectSuccess: false,
 		},
@@ -302,7 +302,7 @@ func TestInsertable(t *testing.T) {
 			entry: V001Entry{
 				Rfc3161Obj: models.Rfc3161V001Schema{
 					Tsr: &models.Rfc3161V001SchemaTsr{
-						//Content: &tsr,
+						// Content: &tsr,
 					},
 				},
 				tsrContent: &tsr,

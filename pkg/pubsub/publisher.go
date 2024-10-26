@@ -19,7 +19,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/sigstore/rekor/pkg/events"
+	"github.com/franchb/rekor/pkg/events"
 
 	"golang.org/x/exp/maps"
 	"golang.org/x/exp/slices"

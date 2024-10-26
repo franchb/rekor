@@ -30,14 +30,14 @@ import (
 
 	"github.com/asaskevich/govalidator"
 
-	//TODO: https://github.com/sigstore/rekor/issues/286
+	// TODO: https://github.com/franchb/rekor/issues/286
 	"golang.org/x/crypto/openpgp"        //nolint:staticcheck
 	"golang.org/x/crypto/openpgp/armor"  //nolint:staticcheck
 	"golang.org/x/crypto/openpgp/packet" //nolint:staticcheck
 
-	"github.com/sigstore/rekor/pkg/pki/identity"
-	"github.com/sigstore/sigstore/pkg/cryptoutils"
-	sigsig "github.com/sigstore/sigstore/pkg/signature"
+	"github.com/franchb/rekor/pkg/pki/identity"
+	"github.com/franchb/sigstore/pkg/cryptoutils"
+	sigsig "github.com/franchb/sigstore/pkg/signature"
 )
 
 // Signature that follows the PGP standard; supports both armored & binary detached signatures
@@ -232,7 +232,7 @@ func NewPublicKey(r io.Reader) (*PublicKey, error) {
 
 // FetchPublicKey implements pki.PublicKey interface
 func FetchPublicKey(ctx context.Context, url string) (*PublicKey, error) {
-	//TODO: detect if url is hkp and adjust accordingly
+	// TODO: detect if url is hkp and adjust accordingly
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error fetching PGP public key: %w", err)

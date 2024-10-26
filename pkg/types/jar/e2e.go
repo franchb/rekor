@@ -22,18 +22,18 @@ import (
 	"bytes"
 	"context"
 	"crypto"
-	"github.com/sigstore/rekor/pkg/util"
+	"github.com/franchb/rekor/pkg/util"
 	"os"
 	"strings"
 	"testing"
 
+	sigx509 "github.com/franchb/rekor/pkg/pki/x509"
 	"github.com/sassoftware/relic/lib/certloader"
 	"github.com/sassoftware/relic/lib/signjar"
 	"github.com/sassoftware/relic/lib/zipslicer"
-	sigx509 "github.com/sigstore/rekor/pkg/pki/x509"
 )
 
-//note: reuses PKI artifacts from x509 tests
+// note: reuses PKI artifacts from x509 tests
 
 const manifest = `Manifest-Version: 1.0
 Created-By: REPLACE
@@ -47,7 +47,7 @@ SHA-256-Digest: cp40SgHlLIIr397GHijW7aAmWNLn0rgKm5Ap9B4hLd4=
 func CreateSignedJar(t *testing.T, artifactPath string) {
 	t.Helper()
 
-	//create a ZIP file with a single file inside
+	// create a ZIP file with a single file inside
 	f, err := os.Create(artifactPath)
 	if err != nil {
 		t.Fatal(err)

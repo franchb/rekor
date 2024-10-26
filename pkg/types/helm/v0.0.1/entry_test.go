@@ -28,8 +28,8 @@ import (
 	"github.com/go-openapi/swag"
 	"go.uber.org/goleak"
 
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/types"
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/types"
 )
 
 func TestMain(m *testing.M) {
@@ -276,7 +276,7 @@ func TestInsertable(t *testing.T) {
 						},
 					},
 					PublicKey: &models.HelmV001SchemaPublicKey{
-						//Content: &pubKey,
+						// Content: &pubKey,
 					},
 				},
 			},
@@ -306,7 +306,7 @@ func TestInsertable(t *testing.T) {
 				HelmObj: models.HelmV001Schema{
 					Chart: &models.HelmV001SchemaChart{
 						Provenance: &models.HelmV001SchemaChartProvenance{
-							//Content: strfmt.Base64([]byte("content")),
+							// Content: strfmt.Base64([]byte("content")),
 						},
 					},
 					PublicKey: &models.HelmV001SchemaPublicKey{

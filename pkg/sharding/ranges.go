@@ -25,9 +25,9 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/franchb/rekor/pkg/log"
 	"github.com/google/trillian"
 	"github.com/google/trillian/types"
-	"github.com/sigstore/rekor/pkg/log"
 	"sigs.k8s.io/yaml"
 )
 

@@ -18,17 +18,17 @@ import (
 	"context"
 	"encoding/hex"
 	"fmt"
+	"github.com/redis/go-redis/v9"
 	"strconv"
 	"time"
 
+	"github.com/franchb/rekor/pkg/log"
+	"github.com/franchb/rekor/pkg/trillianclient"
+	"github.com/franchb/rekor/pkg/util"
+	"github.com/franchb/sigstore/pkg/signature"
 	"github.com/google/trillian"
 	"github.com/google/trillian/types"
 	"github.com/prometheus/client_golang/prometheus"
-	"github.com/redis/go-redis/v9"
-	"github.com/sigstore/rekor/pkg/log"
-	"github.com/sigstore/rekor/pkg/trillianclient"
-	"github.com/sigstore/rekor/pkg/util"
-	"github.com/sigstore/sigstore/pkg/signature"
 	"google.golang.org/grpc/codes"
 )
 

@@ -24,8 +24,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/sigstore/sigstore/pkg/signature"
-	"github.com/sigstore/sigstore/pkg/signature/options"
+	"github.com/franchb/sigstore/pkg/signature"
+	"github.com/franchb/sigstore/pkg/signature/options"
 )
 
 // heavily borrowed from https://github.com/transparency-dev/formats/blob/main/log/checkpoint.go

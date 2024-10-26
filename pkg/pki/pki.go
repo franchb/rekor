@@ -18,8 +18,8 @@ package pki
 import (
 	"io"
 
-	"github.com/sigstore/rekor/pkg/pki/identity"
-	sigsig "github.com/sigstore/sigstore/pkg/signature"
+	"github.com/franchb/rekor/pkg/pki/identity"
+	sigsig "github.com/franchb/sigstore/pkg/signature"
 )
 
 // PublicKey Generic object representing a public key (regardless of format & algorithm)

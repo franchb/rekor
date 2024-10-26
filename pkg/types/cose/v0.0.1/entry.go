@@ -36,12 +36,12 @@ import (
 	"github.com/spf13/viper"
 	gocose "github.com/veraison/go-cose"
 
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/log"
-	"github.com/sigstore/rekor/pkg/pki"
-	"github.com/sigstore/rekor/pkg/pki/x509"
-	"github.com/sigstore/rekor/pkg/types"
-	"github.com/sigstore/rekor/pkg/types/cose"
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/log"
+	"github.com/franchb/rekor/pkg/pki"
+	"github.com/franchb/rekor/pkg/pki/x509"
+	"github.com/franchb/rekor/pkg/types"
+	"github.com/franchb/rekor/pkg/types/cose"
 )
 
 const (

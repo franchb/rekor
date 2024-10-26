@@ -35,13 +35,13 @@ import (
 	"github.com/go-openapi/swag"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/log"
-	"github.com/sigstore/rekor/pkg/pki"
-	"github.com/sigstore/rekor/pkg/pki/pgp"
-	"github.com/sigstore/rekor/pkg/types"
-	"github.com/sigstore/rekor/pkg/types/rpm"
-	"github.com/sigstore/rekor/pkg/util"
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/log"
+	"github.com/franchb/rekor/pkg/pki"
+	"github.com/franchb/rekor/pkg/pki/pgp"
+	"github.com/franchb/rekor/pkg/types"
+	"github.com/franchb/rekor/pkg/types/rpm"
+	"github.com/franchb/rekor/pkg/util"
 )
 
 const (

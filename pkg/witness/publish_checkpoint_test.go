@@ -22,17 +22,17 @@ import (
 	"crypto/rand"
 	"errors"
 	"fmt"
+	"github.com/go-redis/redismock/v9"
 	"testing"
 	"time"
 
-	"github.com/go-redis/redismock/v9"
+	"github.com/franchb/rekor/pkg/witness/mockclient"
+	"github.com/franchb/sigstore/pkg/signature"
 	"github.com/golang/mock/gomock"
 	"github.com/google/trillian"
 	"github.com/google/trillian/types"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/testutil"
-	"github.com/sigstore/rekor/pkg/witness/mockclient"
-	"github.com/sigstore/sigstore/pkg/signature"
 	"go.uber.org/goleak"
 )
 

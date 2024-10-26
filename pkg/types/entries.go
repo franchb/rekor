@@ -24,10 +24,10 @@ import (
 	"reflect"
 
 	"github.com/cyberphone/json-canonicalization/go/src/webpki.org/jsoncanonicalizer"
+	"github.com/franchb/rekor/pkg/generated/models"
+	"github.com/franchb/rekor/pkg/pki"
 	"github.com/go-openapi/strfmt"
 	"github.com/mitchellh/mapstructure"
-	"github.com/sigstore/rekor/pkg/generated/models"
-	"github.com/sigstore/rekor/pkg/pki"
 )
 
 // EntryImpl specifies the behavior of a versioned type
